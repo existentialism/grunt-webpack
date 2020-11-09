@@ -1,7 +1,7 @@
 {
   "name": "@existentialism/grunt-webpack",
   "description": "Use webpack with grunt.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/existentialism/grunt-webpack/grunt-webpack",
   "author": {
     "name": "Tobias Koppers @sokra"
