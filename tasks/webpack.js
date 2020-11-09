@@ -105,6 +105,16 @@ module.exports = (grunt) => {
 
       if (opts.watch) {
         compiler.watch(webpackOptions.watchOptions || {}, handler);
+
+        grunt.log.writeln("[webpack]: Compilation starting…");
+
+        compiler.hooks.watchRun.tap("watchInfo", () =>
+          grunt.log.writeln("[webpack]: Compilation starting…"),
+        );
+
+        compiler.hooks.done.tap("watchInfo", () =>
+          grunt.log.writeln("[webpack]: Compilation finished"),
+        );
       } else {
         compiler.run(handler);
       }
